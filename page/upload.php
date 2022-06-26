@@ -17,7 +17,7 @@ if (!isset($_POST['upbtn'])) { ?>
             exit();
         }
         if (is_uploaded_file($_FILES['myfile']['tmp_name'])) {
-            move_uploaded_file($_FILES['myfile']['name'], "/image/{$_FILES['myfile']['name']}");
+            move_uploaded_file($_FILES['myfile']['name'], "image/{$_FILES['myfile']['name']}");
         }
         echo echo "<h3><span style='color: green;'>File is successfuly uploaded!</span></h3>";
         return false;
